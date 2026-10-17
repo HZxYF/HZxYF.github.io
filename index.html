@@ -43,6 +43,31 @@
         <p>李怡菲大美女</p >
         <p>我爱李怡菲</p >
 
+        <!-- 在一起的天数 -->
+        <p id="days-counter"></p >
+
+        <script>
+            // 在一起的日期：2024年5月15日（月份从0开始，所以5月写成4）
+            var startDate = new Date(2024, 4, 15);
+
+            function updateCounter() {
+                var now = new Date();
+                var diff = now - startDate; // 毫秒差
+
+                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                var hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+                var minutes = Math.floor(diff / (1000 * 60)) % 60;
+                var seconds = Math.floor(diff / 1000) % 60;
+
+                document.getElementById("days-counter").innerText =
+                    "我们已经在一起 " + days + " 天 " + hours + " 小时 " +
+                    minutes + " 分 " + seconds + " 秒 ❤";
+            }
+
+            updateCounter();               // 先立刻显示一次
+            setInterval(updateCounter, 1000); // 之后每秒刷新一次
+        </script>
+
         <h2>我的网站</h2>
 
         <a href=" " target="_blank">
