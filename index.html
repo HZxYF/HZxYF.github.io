@@ -31,6 +31,25 @@
             margin: 150px 100px 150px auto;
             border-radius: 20px;
         }
+
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .album-photo {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .album-photo:hover {
+            transform: scale(1.15);
+        }
     </style>
 </head>
 
@@ -44,7 +63,7 @@
         <p>我爱李怡菲</p >
 
         <!-- 在一起的天数 -->
-        <p id="days-counter"></p>
+        <p id="days-counter"></p >
 
         <script>
             // 在一起的日期：2024年5月15日（月份从0开始，所以5月写成4）
@@ -85,6 +104,17 @@
         <a href="https://github.com" target="_blank">
             访问 Github
         </a >
+
+        <h2>我们的回忆相册</h2>
+
+        <div class="album">
+            < img class="album-photo" src="photo1.jpg" alt="照片1">
+            < img class="album-photo" src="photo2.jpg" alt="照片2">
+            < img class="album-photo" src="photo3.jpg" alt="照片3">
+            < img class="album-photo" src="photo4.jpg" alt="照片4">
+            < img class="album-photo" src="photo5.jpg" alt="照片5">
+            < img class="album-photo" src="photo6.jpg" alt="照片6">
+        </div>
 
         <h2>我的技能</h2>
 
